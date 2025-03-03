@@ -1,0 +1,15 @@
+# Core dependencies
+google-cloud-bigquery>=3.10.0
+schedule>=1.2.0
+python-dotenv>=1.0.0
+matplotlib>=3.7.0
+
+# AI/ML Dependencies - updated for compatibility
+openai>=1.6.1,<2.0.0
+langchain>=0.0.292
+langchain-openai>=0.0.2
+
+# Utility libraries
+requests>=2.28.0
+numpy>=1.23.0
+pandas

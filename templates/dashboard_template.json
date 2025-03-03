@@ -1,0 +1,93 @@
+{
+  "dataSourceProperties": {
+    "type": "FILE",
+    "filename": "dashboard_data.json"
+  },
+  "reportProperties": {
+    "locale": "en_US",
+    "timeZone": "America/New_York"
+  },
+  "charts": [
+    {
+      "type": "SCORECARD",
+      "dataDimensions": [
+        {
+          "field": "sales_data.total_sales",
+          "name": "Total Sales"
+        }
+      ]
+    },
+    {
+      "type": "SCORECARD",
+      "dataDimensions": [
+        {
+          "field": "sales_data.total_revenue",
+          "name": "Total Revenue ($)"
+        }
+      ]
+    },
+    {
+      "type": "PIE_CHART",
+      "dataDimensions": [
+        {
+          "field": "category_sales.data[].category",
+          "name": "Category"
+        },
+        {
+          "field": "category_sales.data[].revenue",
+          "name": "Revenue ($)"
+        }
+      ]
+    },
+    {
+      "type": "TIME_SERIES",
+      "dataDimensions": [
+        {
+          "field": "sales_trends.data[].hour",
+          "name": "Hour"
+        },
+        {
+          "field": "sales_trends.data[].revenue",
+          "name": "Revenue ($)"
+        }
+      ]
+    },
+    {
+      "type": "TABLE",
+      "dataDimensions": [
+        {
+          "field": "sales_data.data[].product_name",
+          "name": "Product Name"
+        },
+        {
+          "field": "sales_data.data[].category",
+          "name": "Category"
+        },
+        {
+          "field": "sales_data.data[].price",
+          "name": "Price ($)"
+        },
+        {
+          "field": "sales_data.data[].quantity",
+          "name": "Quantity"
+        }
+      ]
+    }
+  ],
+  "textComponents": [
+    {
+      "type": "TEXT",
+      "content": {
+        "field": "summary",
+        "name": "Sales Summary"
+      }
+    },
+    {
+      "type": "TEXT",
+      "content": {
+        "text": "Last Updated: ${last_updated}",
+        "name": "Update Information"
+      }
+    }
+  ]
+}
